@@ -1,0 +1,45 @@
+.div1 {
+  width: 100px;
+  height: 100px;
+  border-width: 5px;
+  border-style: solid solid dotted dotted;
+  border-color: black;
+  border-radius: 50%;
+  animation: leftt 2s linear infinite;
+  transform: translateX(-50%);
+  position: absolute;
+  right: 50%;
+  top: 50%;
+}
+.div1::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: auto;
+  width: 60px;
+  height: 60px;
+  border-width: 5px;
+  border-style: solid dotted;
+  border-color: rgb(255, 0, 0);
+  border-radius: 50%;
+  animation: rightt 1s linear infinite;
+}
+@keyframes leftt {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(1turn);
+  }
+}
+@keyframes rightt {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(-1turn);
+  }
+}
